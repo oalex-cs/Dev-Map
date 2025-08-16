@@ -305,3 +305,31 @@ console.log(conteudoAtual);
 elemento.innerHTML = '<p>Novo conteúdo!</p>';
 console.log(elemento.innerHTML);
 // Output: <p>Novo conteúdo!</p>
+
+
+// Armazenar dados localmente:
+
+/*localStorage: É uma API, que permite que os navegadores armazenar dados no dispositivo do usuário. Esses
+dados permanecem mesmo depois do fechamento e a reabertura do navegador, mas só pode ser acessado pelo mesmo
+domínio da página que os armazenou. */
+
+// O localStorage só consegue armazenar strings
+
+/*Como podemos resolver isso? 
+   Usamos o JSON */
+
+/*JSON(Javascript Object Notation): É um formato leve e baseado em texto usado para troca de dados e
+informações entre sistemas.*/
+
+{ tarefa: "Estudar JS", concluida: false } // Javascript
+"{\"tarefa\":\"Estudar JS\",\"concluida\":false}" //JSON
+
+
+/*JSON.stringify: Transforma o objeto/array do JS em string para o localStorage
+  JSON.parse: Transforma de volta aquela string em objeto/array para o JS */
+
+let dados = {tarefas: ["Estudar", "Ler a Biblia"]}
+
+localStorage.setItem("todo", JSON.stringify(dados)); // Enviamos para o localStorage
+
+let recuperado = JSON.parse(localStorage.getItem("todo")); // Trazendo o objeto de volta
