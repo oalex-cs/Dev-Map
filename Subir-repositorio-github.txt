@@ -1,0 +1,5 @@
+// Abrir a pasta do projeto no cmd
+// Executar o comando "git init" (Para iniciar o git dentro da pasta)
+// Executar o comando "git add ." (Para adicionar todos os arquivos ao repositório git)
+// Executar o comando "git commit -m 'Mensagem do commit'" 
+
